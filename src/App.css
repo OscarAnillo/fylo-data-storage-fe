@@ -9,4 +9,227 @@
 .App {
   text-align: center;
   font-family: 'Raleway', sans-serif;
+  background-image: url('/public/images/bg-mobile.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+.container {
+  width: 90%;
+  max-width: 365px;
+  position: relative;
+  height: inherit;
+  margin: auto;
+}
+
+/* ActivityComponent */
+.activity {
+  /* border: 1px solid red; */
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.first-div {
+  background: hsl(228, 56%, 26%);
+  padding: 2em;
+  border-radius: 10px;
+  border-top-right-radius: 100px;
+  text-align: left;
+}
+.logo {
+  padding: 1em 0 2em 0;
+}
+.document {
+  border-radius: 8px;
+  background: rgb(11, 17, 43);
+  margin-right: 1em;
+  padding: 1em;
+} 
+.folder {
+  border-radius: 8px;
+  background: rgb(11, 17, 43);
+  margin-right: 1em;
+  padding: 1.1em 1em;
+}
+.upload {
+  border-radius: 8px;
+  background: rgb(11, 17, 43);
+  margin-right: 1em;
+  padding: 1.2em 1em;
+}
+
+.second-div {
+  background: hsl(228, 56%, 26%);
+  border-radius: 10px;
+  margin-top: 1.5em;
+  padding: 2em .5em;
+  color: #fff;
+  position: relative;
+}
+.second-div > div {
+  /* border: 1px solid red; */
+  width: 90%;
+  margin: auto;
+}
+.used {
+  font-weight: 400;
+  font-size: .99rem;
+  color: hsl(243, 100%, 93%);
+  padding-bottom: 1em;
+}
+.used span {
+  color: #fff;
+  font-weight: 700;
+}
+progress {
+  border: none;
+  width: 95%;
+  margin-bottom: 1em;
+}
+progress[value]::-webkit-progress-bar {
+  background: rgb(20, 31, 76);
+  border-radius: 10px;
+} 
+progress[value]::-webkit-progress-value {
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+.ball {
+  background: #fff;
+  border-radius: 100px;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  top: 39.5%;
+  left: 61.8%;
+}
+.row-second {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row-second > div {
+  padding-bottom: 1.5em;
+}
+
+.second-div .white-bg {
+  background: #fff;
+  border-radius: 15px;
+  position: absolute;
+  top: 80%;
+  left: 25%;
+  width: 50%;
+  padding: 1em 0;
+}
+
+.second-div .white-bg h1 {
+  color: hsl(229, 57%, 11%);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.second-div .white-bg span {
+  color: hsl(229, 7%, 55%);
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media(min-width: 1000px){
+  .App {
+    background-image: url('/public/images/bg-desktop.png');
+    background-color: rgb(12, 18, 44);
+    background-size: contain;
+    background-position: center bottom;
+  }
+  .container {
+    max-width: 925px;
+  }
+  
+  /* ActivityComponent */
+  .activity {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    top: 45%;
+  }
+  .activity > div {
+    width: 100%;
+  }
+  .activity > div:nth-child(1) {
+    width: 50%;
+    margin-right: 2em;
+  }
+  .first-div {
+    text-align: left;
+    box-shadow: 3px 5px 30px rgb(11, 17, 43);
+  }
+  
+  .second-div {
+    text-align: left;
+    box-shadow: 3px 5px 30px rgb(11, 17, 43);
+  }
+  .second-div > div {
+    width: 90%;
+    margin: auto;
+    padding: .5em 0;
+  }
+  .used {
+    font-weight: 400;
+    font-size: 1rem;
+    color: hsl(243, 100%, 93%);
+    padding-bottom: 1em;
+  }
+  .used span {
+    color: #fff;
+    font-weight: 700;
+  }
+  progress[value]::-webkit-progress-value {
+    border: 2px solid #000;
+
+  }
+  .ball {
+    top: 46%;
+    left: 62%;
+  }
+  .row-second {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+  }
+  .row-second > div {
+    padding-bottom: 0;
+  }
+  
+  .second-div .white-bg {
+    border-radius: 7px;
+    position: absolute;
+    top: -28%;
+    left: 58%;
+    width: 30%;
+    padding: 1em 0;
+    text-align: center;
+  }
+  .second-div .white-bg::before {
+    content: '';
+    position: absolute;
+    top: 4.6rem;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-width: 0.625rem;
+    border-style: solid;
+    border-color: transparent #fff #fff transparent;
+    transform: rotate(135deg);
+  }
+  
+  .second-div .white-bg h1 {
+    font-size: 2.8rem;
+  }
 }

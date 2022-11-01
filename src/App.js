@@ -1,10 +1,12 @@
 import './App.css';
+import ActivityComponent from './components/activity-component';
 
 function App() {
   return (
     <div className="App">
-      <h1>Oscar Anillo</h1>
-      <p>Web UI Developer</p>
+      <div className="container">
+        <ActivityComponent />
+      </div>
     </div>
   );
 }
